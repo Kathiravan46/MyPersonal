@@ -7,25 +7,25 @@ using NUnit.Framework;
 [TestFixture]
 class MainTest : BasePage
 {
-    // [Test, Category("smoke")]
-    // public async Task DryRun()
-    // {
-    //     var login = new Test(page!);
-    //     await login.practice();
-    //     Assert.Pass("Completed");
-    // }
-    // [Test, Category("smoke")]
-    // public async Task Table()
-    // {        var list = new List(page!);
-    //     await list.Lists();
-    // }
+    [Test, Category("smoke")]
+    public async Task DryRun()
+    {
+        var login = new Test(page!);
+        await login.practice();
+        Assert.Pass("Completed");
+    }
+    [Test, Category("smoke")]
+    public async Task Table()
+    {        var list = new List(page!);
+        await list.Lists();
+    }
 
-    // [Test, Category("smoke")]
-    // public async Task PriceAndName()
-    // {
-    //     var price = new Price(page!);
-    //     await price.PrintBooksAndLinks();
-    // }
+    [Test, Category("smoke")]
+    public async Task PriceAndName()
+    {
+        var price = new Price(page!);
+        await price.PrintBooksAndLinks();
+    }
     [Test]
     public async Task DropDown()
     {
