@@ -2,25 +2,25 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.Playwright;
 using NUnit.Framework;
 
-[assembly: LevelOfParallelism(2)]
+//[assembly: LevelOfParallelism(2)]
 
 [TestFixture]
 class MainTest : BasePage
 {
-    // [Test, Category("smoke")]
+    // [Test]
     // public async Task DryRun()
     // {
     //     var login = new Test(page!);
     //     await login.practice();
     //     Assert.Pass("Completed");
     // }
-    // [Test, Category("smoke")]
+    // [Test]
     // public async Task Table()
     // {        var list = new List(page!);
     //     await list.Lists();
     // }
 
-    // [Test, Category("smoke")]
+    // [Test]
     // public async Task PriceAndName()
     // {
     //     var price = new Price(page!);
@@ -50,10 +50,16 @@ class MainTest : BasePage
     //     var newpage = new NewTab(page!, context!);
     //     await newpage.NewTabs();
     // }
+    // [Test]
+    // public async Task ReUse()
+    // {
+    //     var reuse = new Reuse(page!);
+    //     await reuse.ReuseLogin();
+    // }   
     [Test]
-    public async Task ReUse()
+    public async Task MultipleLoginTest()   
     {
-        var reuse = new Reuse(page!);
-        await reuse.ReuseLogin();
-    }   
+        var multipleLogin = new MultipleLogin(page!);
+        await multipleLogin.Login();
+    }
 }

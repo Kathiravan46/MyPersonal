@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\suba\\OneDrive\\Documents\\Kathir\\Handson-20251014T045653Z-1-001\\Handson\\Handson.csproj": {}
+    "C:\\Kathir Automation\\Kathir\\Handson-20251014T045653Z-1-001\\Handson\\Handson.csproj": {}
   },
   "projects": {
-    "C:\\Users\\suba\\OneDrive\\Documents\\Kathir\\Handson-20251014T045653Z-1-001\\Handson\\Handson.csproj": {
+    "C:\\Kathir Automation\\Kathir\\Handson-20251014T045653Z-1-001\\Handson\\Handson.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\suba\\OneDrive\\Documents\\Kathir\\Handson-20251014T045653Z-1-001\\Handson\\Handson.csproj",
+        "projectUniqueName": "C:\\Kathir Automation\\Kathir\\Handson-20251014T045653Z-1-001\\Handson\\Handson.csproj",
         "projectName": "Handson",
-        "projectPath": "C:\\Users\\suba\\OneDrive\\Documents\\Kathir\\Handson-20251014T045653Z-1-001\\Handson\\Handson.csproj",
+        "projectPath": "C:\\Kathir Automation\\Kathir\\Handson-20251014T045653Z-1-001\\Handson\\Handson.csproj",
         "packagesPath": "C:\\Users\\suba\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\suba\\OneDrive\\Documents\\Kathir\\Handson-20251014T045653Z-1-001\\Handson\\obj\\",
+        "outputPath": "C:\\Kathir Automation\\Kathir\\Handson-20251014T045653Z-1-001\\Handson\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\suba\\AppData\\Roaming\\NuGet\\NuGet.Config"
