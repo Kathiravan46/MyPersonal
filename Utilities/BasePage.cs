@@ -45,9 +45,11 @@ public abstract class BasePage : IBrowserManager
     {
         if (context != null)
         {
+            var traceDir = "C:\\Kathir Automation\\Kathir\\Handson-20251014T045653Z-1-001\\Handson\\TestResults\\Trace";
+            Directory.CreateDirectory(traceDir);
             await context.Tracing.StopAsync(new TracingStopOptions
             {
-                Path = "@C:\\Users\\suba\\OneDrive\\Documents\\Kathir\\Handson-20251014T045653Z-1-001\\Handson\\TestResults\\Trace{TestContext.CurrentContext.Test.Name}.zip"
+                Path = Path.Combine(traceDir, "Trace.zip")
             });
 
             await context.CloseAsync();
@@ -57,7 +59,6 @@ public abstract class BasePage : IBrowserManager
         {
             await browser.CloseAsync();
         }
-
         playwright?.Dispose();
     }
 }
