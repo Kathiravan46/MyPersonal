@@ -47,7 +47,7 @@ public abstract class BasePage : IBrowserManager
         {
             await context.Tracing.StopAsync(new TracingStopOptions
             {
-                Path = "C:\\Users\\suba\\OneDrive\\Documents\\Kathir\\Handson-20251014T045653Z-1-001\\Handson\\TestResults\\Trace{TestContext.CurrentContext.Test.Name}.zip"
+                Path = "@C:\\Users\\suba\\OneDrive\\Documents\\Kathir\\Handson-20251014T045653Z-1-001\\Handson\\TestResults\\Trace{TestContext.CurrentContext.Test.Name}.zip"
             });
 
             await context.CloseAsync();
