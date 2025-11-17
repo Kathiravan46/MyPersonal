@@ -8,7 +8,6 @@ public class MultipleLogin
         this.page = page;
         
     }
-
     public async Task Login()
     {
         try
@@ -17,8 +16,8 @@ public class MultipleLogin
             foreach (var line in file.Skip(1))
             {
                 var parts = line.Split(',');
-                var username = parts[0];
-                var password = parts[1];
+                var username = parts[0].Trim();
+                var password = parts[1].Trim();
 
                 // Perform login with username and password
                 Console.WriteLine($"Logging in with Username: {username} and Password: {password}");
@@ -34,5 +33,7 @@ public class MultipleLogin
         {
             Console.WriteLine($"An error occurred: {ex.Message}");
         }
-    }
+        var text = page.Locator("//div[text()='Swag Labs']");
+        await Assertions.Expect(text).ToHaveTextAsync("Swag Labs");
+    }   
 }

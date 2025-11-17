@@ -24,6 +24,7 @@ public class NewTab
         var newTabs = await newTab;
         await newTabs.WaitForLoadStateAsync();
         await page.BringToFrontAsync();
+        
             
     }
 }
