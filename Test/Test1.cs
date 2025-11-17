@@ -58,19 +58,12 @@ class MainTest : BasePage
     //     var reuse = new Reuse(page!);
     //     await reuse.ReuseLogin();
     // }
-    // [Test]
-    // public async Task MultipleLoginTest()
-    // {
-    //     var multipleLogin = new MultipleLogin(page!);
-    //     await multipleLogin.Login();
-    // }
     [Test]
-    public async Task DynamicTableTest()
+    public async Task MultipleLoginTest()
     {
-        var dynamicTable = new DynamicTable(page!);
-        await dynamicTable.HandleDynamicTable();
- 
+        var multipleLogin = new MultipleLogin(page!);
+        await multipleLogin.Login();
     }
-}
+    }
 
     

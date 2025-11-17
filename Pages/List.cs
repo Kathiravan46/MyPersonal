@@ -1,4 +1,3 @@
-using DocumentFormat.OpenXml.InkML;
 using Microsoft.Playwright;
 using NUnit.Framework;
 
@@ -23,6 +22,7 @@ private readonly IPage page;
         int counts = cities.Count(c => c.Equals("Chennai", StringComparison.OrdinalIgnoreCase));
         Console.WriteLine("The count of Chennai is :" + counts);
         Assert.That(counts, Is.GreaterThan(50), "Chennai should appear at least once in the table.");
+        
 
     } 
 }
