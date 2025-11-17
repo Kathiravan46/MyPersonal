@@ -27,10 +27,7 @@ class Test
             await page.GetByRole(AriaRole.Link, new() { NameRegex = new Regex("Log\\s*out", RegexOptions.IgnoreCase) }).ClickAsync();
             await page.WaitForSelectorAsync("#username");
             var title = page.GetByAltText("Practice Test Automation").TextContentAsync().Result;
-            Console.WriteLine(title);
-            //Assert.That(title, Is.EqualTo("Practice Test Automation"));
-            
-            
+            Console.WriteLine(title);       
         }
     } 
 }
