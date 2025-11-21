@@ -13,11 +13,21 @@ public abstract class BasePage : IBrowserManager
     protected IBrowserContext? context;
     protected IPage? page;
 
-    [SetUp]
-    public virtual async Task BrowserLaunch()
+    [OneTimeSetUp]
+    public virtual async Task OneTimeSetup()
     {
         playwright = await Playwright.CreateAsync();
         browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions { Headless = false });
+
+    }
+    [SetUp]
+    public virtual async Task BrowserLaunch()
+    {
+        // Ensure the browser was initialized in OneTimeSetup
+        if (browser == null)
+        {
+            throw new System.InvalidOperationException("Browser has not been initialized. Ensure OneTimeSetup has run before SetUp.");
+        }
 
         // Create context with video recording enabled
         context = await browser.NewContextAsync(new BrowserNewContextOptions
@@ -53,8 +63,11 @@ public abstract class BasePage : IBrowserManager
             });
 
             await context.CloseAsync();
-        }
-
+        }   
+    }
+    [OneTimeTearDown]
+    public virtual async Task OneTimeTearDown()
+    {
         if (browser != null)
         {
             await browser.CloseAsync();

@@ -58,12 +58,18 @@ class MainTest : BasePage
     //     var reuse = new Reuse(page!);
     //     await reuse.ReuseLogin();
     // }
-    [Test]
-    public async Task MultipleLoginTest()
+    // [Test]
+    // public async Task MultipleLoginTest()
+    // {
+    //     var multipleLogin = new MultipleLogin(page!);
+    //     await multipleLogin.Login();
+    // }
+    [Test,Retry(2)]
+    public async Task ErrorValidationTest()
     {
-        var multipleLogin = new MultipleLogin(page!);
-        await multipleLogin.Login();
+        var errorValidation = new ErrorValidation(page!);
+        await errorValidation.Cities();
     }
-    }
+}
 
     

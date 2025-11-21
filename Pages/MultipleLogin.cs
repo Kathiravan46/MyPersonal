@@ -8,7 +8,6 @@ public class MultipleLogin
         this.page = page;
         
     }
-
     public async Task Login()
     {
         try
